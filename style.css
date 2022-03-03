@@ -1,0 +1,160 @@
+@font-face {
+  font-family: jiskan;
+  src: url(./font/JF\ Dot\ jiskan24\ regular.ttf);
+}
+
+*{
+  font-family: jiskan, sans-serif;
+  font-weight: normal;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2d2d2d url(./img/dunes.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited{
+  color: inherit;
+  text-decoration: none;
+}
+
+.main{
+  display: grid;
+  width: 800px;
+  grid-template-columns: 1fr .01fr;
+  grid-template-rows: 100%;
+  color: white;
+}
+
+.content-section{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50px 400px;
+}
+
+.card-section{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  align-self: flex-start;
+  justify-self: center;
+  padding-top: 45px;
+}
+
+.card a:not(:first-child){
+  padding-left: 5px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, .75);
+}
+
+.title-link{
+  padding-left: 0;
+}
+
+.card a:hover{
+  color: #B98E20;
+  transition-duration: .2s;
+}
+
+.title{
+  font-size: 1.7rem;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-left: 1%;
+}
+
+.loading{
+  filter: drop-shadow(-3px 0px 1px #030303);
+}
+
+.loading:after {
+  content: "...";
+  display: inline-block;
+  vertical-align: bottom;
+  animation: ellipsis-dot 1.5s infinite .3s;
+  animation-fill-mode: fowards;
+  width: 1.25em;
+}
+
+.image-section{
+  display: flex;
+  justify-content: center;
+}
+
+.side-image{
+  /* border: 3px solid rgba(255, 255, 255, .6); */
+  max-height: 200px;
+  margin-top: -70px;
+  margin-left: -100px;
+}
+
+@keyframes ellipsis-dot {
+  25% {
+    content: "";
+  }
+  50% {
+    content: ".";
+  }
+  75% {
+    content: "..";
+  }
+  100% {
+    content: "...";
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .main{
+    grid-template-columns: 100%;
+    min-width: 80%;
+    max-width: 80%;
+  }
+
+  .image-section{
+    display: none;
+  }
+
+  .card{
+    align-self: center;
+    justify-self: center;
+  }
+
+  .card a{
+    padding-left: 0;
+  }
+
+  .card-section{
+    text-align: center;
+  }
+
+  .title{
+    justify-content: center;
+    padding-left: 0;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .card-section{
+    grid-template-columns: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
