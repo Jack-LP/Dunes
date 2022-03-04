@@ -1,3 +1,8 @@
 # Dunes - animated startpage
-![Dunes](https://i.imgur.com/odatk8E.gif)
+<img src="https://i.imgur.com/odatk8E.gif"/>
+
+[<img alt="alt_text" src="https://i.ibb.co/yS9tBG3/livesite.png" />](https://jack-lp.github.io/Dunes/)
+
 ---
+
+
